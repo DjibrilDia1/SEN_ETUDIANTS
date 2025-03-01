@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ======================= Section Head ======================= -->
+<?php require_once("view/sections/admin/head.php") ?>
+
+<body>
+
+    <!-- ======================= Section Menu haut ======================= -->
+    <?php require_once("view/sections/admin/menuHaut.php") ?>
+
+    <!-- ======================= Section Menu Gauche ======================= -->
+    <?php require_once("view/sections/admin/menuGauche.php") ?>
+
+    <!-- ======================= Base content ========================= -->
+    <?php require_once("view/sections/admin/baseContent.php") ?>
+
+    <!-- ======================= Section footer ======================= -->
+    <?php require_once("view/sections/admin/footer.php") ?>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+    <!-- ======================= Section script ======================= -->
+    <?php require_once("view/sections/admin/script.php") ?>
+
+</body>
+
+</html>
