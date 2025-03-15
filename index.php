@@ -57,6 +57,9 @@
     <!-- ======================= Section Include  ======================= -->
     <?php require_once("view/sections/vitrine/include.php")?>
 
+    <!-- =======================  message error And Success   ======================= -->
+    <?php require_once("view/sections/admin/msgErrorOrSuccess.php") ?>
+
     <!-- ======================= Section BASE JS  ======================= -->
     <?php require_once("view/sections/vitrine/script.php")?>
 

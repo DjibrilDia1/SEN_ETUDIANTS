@@ -28,6 +28,9 @@
     <!-- Template Main CSS File -->
     <link href="public/templates/templateAdmin/assets/css/style.css" rel="stylesheet">
 
+    <!-- Template data table CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
     <!-- =======================================================
   * Template Name: NiceAdmin
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/

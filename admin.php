@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <!-- ======================= Section Head ======================= -->
 <?php require_once("view/sections/admin/head.php") ?>
 
 <body>
+
+	<!-- ================== Vérifier la session================== -->
+	<?php require_once("view/sections/admin/verifierSession.php") ?>
 
     <!-- ======================= Section Menu haut ======================= -->
     <?php require_once("view/sections/admin/menuHaut.php") ?>
@@ -24,6 +24,7 @@
     <!-- ======================= Section script ======================= -->
     <?php require_once("view/sections/admin/script.php") ?>
 
-</body>
+    <!-- =======================  message error And Success   ======================= -->
+    <?php require_once("view/sections/admin/msgErrorOrSuccess.php") ?>
 
-</html>
+</body>

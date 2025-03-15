@@ -1,0 +1,27 @@
+RewriteEngine On 
+
+# Global
+RewriteRule ^admin$ admin.php
+RewriteRule ^home$ index.php
+RewriteRule ^login$ login.php
+
+# --------------------- VIEW -----------------------
+RewriteRule ^dashboard$ view/pages/admin/dashboard/dashboard_admin.php
+RewriteRule ^listeEtudiants$ view/pages/admin/etudiants/liste.php
+RewriteRule ^corbeilleEtudiants$ view/pages/admin/etudiants/corbeille.php
+RewriteRule ^listeEvaluations$ view/pages/admin/evaluations/liste.php
+RewriteRule ^corbeilleEvaluations$ view/pages/admin/evaluations/corbeille.php
+RewriteRule ^listeNotes$ view/pages/admin/notes/liste.php
+RewriteRule ^Corbeillenotes$ view/pages/admin/notes/corbeille.php
+RewriteRule ^profil$ view/pages/admin/profil/profil.php
+
+# --------------------- CONTROLLER -----------------------
+RewriteRule ^userMainController$ controller/users/UserMainController.php
+RewriteRule ^noteMainController$ controller/users/NoteMainController.php
+RewriteRule ^evaluationMainController$ controller/users/EvaluationMainController.php
+RewriteRule ^etudiantMainController$ controller/etudiants/EtudiantMainController.php
+# --------------------- MODEL -----------------------
+RewriteRule ^userRepository$ model/UserRepository.php
+RewriteRule ^noteRepository$ model/NoteRepository.php
+RewriteRule ^evaluationRepository$ model/EvaluationRepository.php
+RewriteRule ^etudiantRepository$ model/EtudiantRepository.php
