@@ -18,7 +18,7 @@ RewriteRule ^profil$ view/pages/admin/profil/profil.php
 # --------------------- CONTROLLER -----------------------
 RewriteRule ^userMainController$ controller/users/UserMainController.php
 RewriteRule ^noteMainController$ controller/users/NoteMainController.php
-RewriteRule ^evaluationMainController$ controller/users/EvaluationMainController.php
+RewriteRule ^evaluationMainController$ controller/evaluations/EvaluationMainController.php
 RewriteRule ^etudiantMainController$ controller/etudiants/EtudiantMainController.php
 # --------------------- MODEL -----------------------
 RewriteRule ^userRepository$ model/UserRepository.php

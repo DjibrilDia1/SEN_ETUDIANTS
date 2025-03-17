@@ -40,16 +40,15 @@
         }
 
         // Permet d'ajouter un etudiant
-        public function add($nom,$prenom,$photo,$email,$password,$matricule,$telephone,$adresse,$createdBy)
+        public function add($nom,$photo,$email,$password,$matricule,$telephone,$adresse,$createdBy)
         {
-            $sql = "INSERT INTO etudiants(nom,prenom,photo,email,password,matricule,telephone,adresse,etat,created_at,created_By) 
-            VALUES(:nom,:prenom,:photo,:email,:password,:matricule,:telephone,:adresse,default,Now(),:created_By)";
+            $sql = "INSERT INTO etudiants(nom,photo,email,password,matricule,telephone,adresse,etat,created_at,created_By) 
+            VALUES(:nom,:photo,:email,:password,:matricule,:telephone,:adresse,default,Now(),:created_By)";
             try {
                 $statement = $this->db->prepare($sql);
                 $statement->execute([
                     'nom' => $nom,
-                    'prenom' => $prenom,
-                    'photo' => $photo,
+                    'photo'=> $photo,
                     'email' => $email,
                     'password'=> $password,
                     'matricule' => $matricule,

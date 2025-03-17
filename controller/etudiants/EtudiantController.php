@@ -38,24 +38,22 @@ class EtudiantController
     {
         // Récupération des informations du formulaire
         $nom       = trim($_POST["nom"] ?? "");
-        $prenom    = trim($_POST["prenom"] ?? "");
         $email     = trim($_POST["email"] ?? "");
-        $photo     = $_FILES["photo"] ?? null;
         $password  = trim($_POST["password"] ?? "");
         $matricule = trim($_POST["matricule"] ?? "");
         $telephone = trim($_POST["telephone"] ?? "");
+        $photo     = $_FILES["photo"] ?? null;
         $adresse   = trim($_POST["adresse"] ?? "");
         $createdBy = $_SESSION["id"] ?? ""; 
 
         // Vérification des champs
         if (
             empty($nom) || 
-            empty($prenom) || 
             empty($email) || 
-            empty($photo) || 
             empty($password) || 
             empty($matricule) || 
             empty($telephone) || 
+            empty($photo) || 
             empty($adresse) || 
             empty($createdBy) || 
             $photo['error'] !== UPLOAD_ERR_OK
@@ -85,8 +83,7 @@ class EtudiantController
         try {
             $newEtudiantId = $this->etudiantRepository->add(
                 $nom,
-                $prenom,
-                $photoName,  // on stocke le nom final dans la BDD
+                $photoName,
                 $email,
                 $password,
                 $matricule,
@@ -107,7 +104,7 @@ class EtudiantController
         $this->setSuccessAndRedirect(
             "Étudiant ajouté avec succès ! (ID : $newEtudiantId)",
             "Ajout réussi",
-            "listeEtudiants"
+            "etudiantMainController"
         );
     }
 
@@ -115,9 +112,7 @@ class EtudiantController
     public function listeEtudiants()
     {
         // Par exemple, on récupère seulement les étudiants actifs : etat=1
-        $etudiants = $this->etudiantRepository->getAll(1);
-
-        // Inclure la vue qui affiche la liste
-        include("../../view/etudiants/listeEtudiants.php");
+        $etudiants = $this->etudiantRepository->getAll(1); 
+        include("../../view/pages/admin/etudiants/liste.php"); 
     }
 }

@@ -90,6 +90,7 @@ class Validator
         const isContainsNumber = '^(?=.*[0-9])';
         const isContainsUpperCase = '^(?=.*[A-Z])';
         const isContainsLowerCase = '^(?=.*[a-z])';
+        const isContainsSymbol = '^(?=.*[-,;.])';
 
         if (!value.length) {
             return {error: true, message: `Le champ ${controlName} est obligatoire`};

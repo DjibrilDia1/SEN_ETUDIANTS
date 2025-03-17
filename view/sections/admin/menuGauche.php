@@ -22,7 +22,7 @@
 
         <!-- Etudiants -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="listeEtudiants">
+            <a class="nav-link collapsed" href="etudiantMainController">
                 <i class="bi bi-person-plus"></i>
                 <span>Etudiants</span>
             </a>
@@ -30,7 +30,7 @@
 
         <!-- Evaluations -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="listeEvaluations">
+            <a class="nav-link collapsed" href="evaluationMainController">
                 <i class="bi bi-file-text"></i>
                 <span>Evaluations/Notes</span>
             </a>
